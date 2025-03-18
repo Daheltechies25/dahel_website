@@ -1,0 +1,171 @@
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background: #0F0F0F;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 40px 20px;
+    overflow-x: hidden; 
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    width: 100%; 
+}
+
+h1 {
+    font-size: 2.8rem;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 1.8rem;
+    margin-top: 50px;
+}
+
+.subtitle {
+    max-width: 600px;
+    margin: auto;
+    font-size: 1rem;
+    opacity: 0.8;
+    line-height: 1.6;
+}
+
+.audience-section {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 30px;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%; 
+    overflow-x: hidden;
+}
+
+.audience-section.reverse {
+    flex-direction: row-reverse;
+}
+
+.image-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    max-width: 100%;
+}
+
+.image-wrapper img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+.audience-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%; 
+    max-width: 600px;
+    flex: 1;
+}
+
+.audience-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #FFFFFF;
+    color: #0C0808;
+    padding: 16px 20px;
+    border-radius: 12px;
+    transition: 0.3s ease-in-out;
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.05);
+    width: 100%;
+}
+
+.audience-item:hover {
+    background: #EAEAEA;
+    transform: translateY(-5px);
+}
+
+.audience-item i {
+    font-size: 1.5rem;
+    color: #5D30F1;
+    background: rgba(93, 48, 241, 0.2);
+    padding: 12px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+}
+
+.audience-item div {
+    text-align: left;
+    flex: 1;
+}
+
+.audience-item h3 {
+    font-size: 1.2rem;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.audience-item p {
+    font-size: 0.9rem;
+    opacity: 0.8;
+    margin: 0;
+    line-height: 1.5;
+}
+
+@media (max-width: 900px) {
+    .audience-section {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+        overflow-x: hidden;
+    }
+
+    .image-wrapper {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .audience-list {
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .audience-item {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        width: 100%;
+    }
+
+    .audience-item i {
+        width: 40px;
+        height: 40px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+    }
+
+    .audience-item div {
+        text-align: center;
+    }
+}
