@@ -1,0 +1,343 @@
+body{
+  border: none;
+  font-family: 'Inter', sans-serif;
+ 
+  padding: 0px !important;
+}
+.slidein {
+  animation-duration: 10s;
+  animation-name: slidein;
+  animation-iteration-count: 3;
+  animation-direction: alternate;
+}
+
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 0%;
+    width: 100%;
+  }
+}
+
+/**targets just the links***/
+.contain {
+  background-color:#5D30F1;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  padding:  10px 20px;
+  width: 100%;
+  margin: 0px auto;
+  color: whitesmoke;font-weight: 100;
+
+
+}
+.contact_us {
+  margin-left: 59px;
+  width: 162px;
+  height: 61px;
+  border-radius: 40px;
+  background-color: #84F4AD;
+  padding: 20px 20px;
+  text-align: center;
+  color: #0C0808;
+  cursor: pointer;
+  font-size: 20px;
+  outline: none;
+  border: none;
+}
+
+.contact_us:hover {
+  background-color: #76E4A2; 
+  color: #FFFFFF; 
+  transform: scale(1.05); 
+}
+/*targets the descriptive links container behaviour*/
+ nav ul li{
+  display: inline-block;
+  list-style: none;
+  margin: 10px 15px;
+  text-align: center;
+  font-weight:100 !important;
+ }
+/**targets the link texts itself**/
+ nav ul li a{
+  text-decoration: none;
+  position: relative;
+  color: whitesmoke;
+  font-size: 20px;
+  font-weight:300 !important;
+ }
+ nav ul li a:after {
+  content: '';
+  position: absolute;
+  width: 0; /* Start width as 0 */
+  height: 5px;
+  bottom: -5px; /* Position it below the anchor text */
+  left: 0;
+  background-color: orange; /* Initial color */
+  border-radius: 2px;
+  transition: width 0.5s ease, top 0.5s ease, background-color 0.5s ease; /* Apply transitions */
+  box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4); /* Optional shadow */
+}
+
+ nav ul li a:hover::after{
+  width: 100%;
+  top: 30px;
+  background-color:  #ffffff; 
+ }
+ nav ul li:last-child a:hover::after {
+  width: 0; /* Make the pseudo-element width zero */
+  background-color: red; /* Optionally make the background transparent */
+}
+/* Style the navigation bar */
+
+.vertical_text_1 {
+  line-height: 70px;
+  position: absolute;
+  text-align: left;
+  font-weight:900 !important;
+  font-size: 60px;
+  top: 150px;
+  left: 60px;
+  color: #ffffffce;
+  padding: 8px;  
+}
+.vertical_text_2{
+  line-height: 35px;
+  position: absolute;
+  text-align: left;
+  font-weight:100;
+  font-size: 20px;
+  top: 180px;
+  left: 70px;
+  color: whitesmoke;
+  font-family: 'myriad-pro';
+  opacity: .9;
+}
+.image-container {
+  position: absolute;
+  width: 400px;
+  height: 504px;;
+  top: 170px;
+  left: 900px;
+}
+
+.image-container img {
+  height: 504px;
+  top: 170px;
+  left: 900px;
+  border-radius: 10px;
+}
+
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(122, 1, 1, 0.5), rgba(0, 0, 255, 0.062));
+  mix-blend-mode: overlay; /* You can change this value for different effects */
+  pointer-events: none;
+}
+.get_started{
+  position: absolute;
+  top: 500px;
+  left: 70px;
+  width: 273px;
+  height: 86px;
+  border-radius: 40px;
+  background-color: #84F4AD;
+  padding: 20px;
+  align-self: flex-start;
+  text-align: center;
+  color: #0C0808;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  outline: none;
+  border: none;
+}
+.get_started:hover{
+  background-color:#84f4aded;
+  }
+
+
+
+.wrapper_2 {
+  font-family: 'Inter', sans-serif;
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.col_1 {
+  width: 562px;;
+  line-height: 25px;
+  margin: 30px 50px;
+  text-align: left;
+  flex-basis: 35%;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+.col_1 h1 {
+  justify-content: left;
+  font-size: 32px;
+  text-align: left;
+}
+.col_1 p{
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0C0808;
+  width: 520px;
+}
+.col_2 img{
+  width: 100%;
+  border-radius: 15px;
+  height: 374px;
+  width: 562px;
+}
+.col_2 {
+flex-basis: 50%;
+margin-bottom: 30px;
+}
+.col_3 {
+  line-height: 25px;
+  margin: 10px 50px;
+  text-align: left;
+  flex-basis: 40%;
+  margin-left: -100px;
+  margin-bottom: 30px;
+}
+.col_3 h1 {
+  justify-content: left;
+  font-size: 32px;
+  text-align: left;
+}
+.col_3 h2 {
+  color:#0C0808;
+  font-size: 50px;
+  font-weight: 500;
+  text-align: left;
+  margin-top: -5px;
+  padding: 10px 0px;
+}
+
+.col_3 p{
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  padding-top: 30px;
+  color: #0C0808;
+}
+.col_4 img{
+  width: 100%;
+  border-radius: 15px;
+  height: 384px;
+  width: 562px;
+  margin-left: -35px;
+}
+.col_4 {
+flex-basis: 60%;
+margin-bottom: 30px;
+}
+.content h1{
+ font-family: 'myriad-pro';
+}
+.title {
+ padding: 30px 0px;
+ line-height: 30px;
+ color: #5D30F1;
+
+}
+.subtitle {
+  color: #0C0808;
+  font-size: 60px;
+}
+.col_6{
+  flex-basis: 50%;
+}
+.col_6 .subtitle {
+  width: 600px;;
+  line-height: 50px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  color: #0C0808;
+  font-size: 50px;
+}
+.col_6 {
+  width: 502px;;
+  line-height: 25px;
+  margin: 30px 50px;
+  text-align: left;
+  flex-basis: 35%;
+  margin-left: 100px;
+  margin-bottom: 30px;
+}
+.col_6 h1 {
+  justify-content: left;
+  margin-top: -30px;
+  font-size: 32px;
+  text-align: left;
+}
+.col_6 p{
+  line-height: 25px;
+  font-weight: 400;
+  font-size: 20px;
+  color: #0C0808;
+  width: 520px;
+}
+.core_values {
+  height: 614px;
+  background-color:#ffffff;
+  margin: auto;
+}
+.text {
+  color: #5D30F1;
+  font-size: 60px;
+  text-align: left;
+  margin: 30px 100px;
+}
+.gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, rgba(165, 210, 231, 0.794), rgba(255, 0, 111, 0.062));
+  mix-blend-mode: overlay; /* You can change this value for different effects */
+  pointer-events: none;
+}
+.frame17 {
+  position: absolute;
+  margin-top: -250px;
+  margin-left: 700px;
+  z-index: 1000;
+}
+.frame18 {
+  position: absolute;
+  margin-top: -150px;
+  margin-left: 980px;
+  z-index: 1000;
+}
+.group {
+  position: absolute;
+  margin-top: -180px;
+  margin-left: 80px;
+  z-index: 1000;
+}
+.row i {
+  color: #5D30F1;
+  margin-right: 20px;
+}
+.row p {
+  color: #0C0808;
+}
