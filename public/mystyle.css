@@ -1,66 +1,100 @@
+* {
+  outline: none!important;
+  box-shadow: none!important;
+  padding: 0;
+  margin: 0;
+}
+img, .ui.segment, h2, p {
+  padding: 0;
+  margin: 0;
+}
+
 body{
-  border: none;
+  border: 0!important;
   font-family: 'Inter', sans-serif;
- 
   padding: 0px !important;
 }
-.slidein {
-  animation-duration: 10s;
-  animation-name: slidein;
-  animation-iteration-count: 3;
-  animation-direction: alternate;
+.ui.sidebar {
+  position: fixed !important;
+  width: 80% !important; /* Full width on mobile */
+  max-width: 300px; /* or whatever you want */
+  right: 0;
+  top: 0;
+  bottom: 0;
+  overflow-y: auto;
+  z-index: 9999;
+}
+/* Ensure padding on the text column */
+.ui.segment {
+  padding: 0px; /* Padding inside the segments */
+  border: none!important;
+ 
+}
+.ui img{
+  width: 100%;
 }
 
-@keyframes slidein {
-  from {
-    margin-left: 100%;
-    width: 300%;
-  }
-
-  to {
-    margin-left: 0%;
-    width: 100%;
-  }
+Adjust padding for text columns on larger screens
+.ui.two.column.stackable .column:first-child {
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
+section {
+  margin: 0px!important;
+}
+.wrapper{
+  margin: 0px;
+}
+.about_wrapper {
+  margin: 0px;
+}
 /**targets just the links***/
 .contain {
-  background-color:#5D30F1;
-  position: absolute;
+  background-color:#0C0808;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   margin: auto;
-  padding:  10px 60px;
+  padding: 5px 10px;
   width: 100%;
+  height: 60px;
   margin: 0px auto;
   color: whitesmoke;font-weight: 100;
-
-
 }
+.logo_container img {
+  max-width: 60%;   /* Prevents the logo from being larger than its container */
+  height: auto;      /* Maintains aspect ratio */
+  display: block;    /* Removes any unwanted space below the image */
+}
+
 .contact_us {
-  margin-left: 59px;
+  background-color: #5D30F1;
+  margin-left: 550px;
   width: 162px;
-  height: 61px;
-  border-radius: 40px;
-  background-color: #84F4AD;
-  padding: 20px 20px;
+  border-radius: 5px;
+  padding: 5px 15px;
   text-align: center;
-  color: #0C0808;
+  color: #ffffff;
   cursor: pointer;
-  font-size: 20px;
+  font-size: 14px;
   outline: none;
   border: none;
 }
-
 .contact_us:hover {
-  background-color: #76E4A2; 
-  color: #FFFFFF; 
+  background-color: #5D30F1;
+  color: #ffffffe6; 
   transform: scale(1.05); 
+}
+.breadcrumb-icon{
+ display: none;   
+}
+nav {
+padding-left: auto;
 }
 /*targets the descriptive links container behaviour*/
  nav ul li{
   display: inline-block;
+  justify-content: flex-start;
   list-style: none;
   margin: 10px 15px;
   text-align: center;
@@ -71,313 +105,170 @@ body{
   text-decoration: none;
   position: relative;
   color: whitesmoke;
-  font-size: 20px;
-  font-weight:300 !important;
+  font-size: 17px;
+  font-weight:100 !important;
+ }
+ nav ul li a:hover{
+  color: #ffffff;
  }
  nav ul li a:after {
   content: '';
   position: absolute;
   width: 0; /* Start width as 0 */
-  height: 5px;
-  bottom: -5px; /* Position it below the anchor text */
+  height: 2px;
+  bottom: 0px; /* Position it below the anchor text */
   left: 0;
-  background-color: orange; /* Initial color */
+  background-color: #ffffff; /* Initial color */
   border-radius: 2px;
-  transition: width 0.5s ease, top 0.5s ease, background-color 0.5s ease; /* Apply transitions */
+  transition: width 0.1s ease, top 0.1s ease, background-color 0.5s ease; /* Apply transitions */
   box-shadow: 1px 1px 2px rgb(0 0 200 / 0.4); /* Optional shadow */
 }
 
  nav ul li a:hover::after{
   width: 100%;
-  top: 30px;
-  background-color:  #ffffff; 
+  top: 22px;
+  background-color:  #ffffffce; 
  }
  nav ul li:last-child a:hover::after {
   width: 0; /* Make the pseudo-element width zero */
   background-color: red; /* Optionally make the background transparent */
 }
-/* Style the navigation bar */
+
 
 .vertical_text_1 {
-  line-height: 70px;
+  z-index: 1;
+  letter-spacing: 4px;
+  width: 800px;
+  max-width: 800px;
+  line-height: 55px;
   position: absolute;
   text-align: left;
   font-weight:900 !important;
-  font-size: 60px;
-  top: 150px;
-  left: 60px;
-  color: #ffffffce;
-  padding: 8px;  
+  font-size: 55px;
+  white-space: wrap;
+  letter-spacing: 1px;
+  top: 200px;
+  left: 125px;
+  color: rgb(248, 243, 243);
 }
 .vertical_text_2{
-  line-height: 35px;
+  z-index: 1;
+  line-height: 25px;
+  width: 50%;
   position: absolute;
   text-align: left;
-  font-weight:100;
+  font-weight:300 !important;;
   font-size: 20px;
-  top: 180px;
-  left: 70px;
+  top:390px;
+  left: 125px;
+  margin-right: auto;
   color: whitesmoke;
-  font-family: 'myriad-pro';
   opacity: .9;
 }
-.image-container {
-  position: absolute;
-  width: 45%;
-  top: 170px;
-  left: 800px;
-
-  padding: 20px;
-  overflow: hidden;
-}
-
-.image-container img {
-  /* height: 504px; */
-  top: 170px;
-  left: 900px;
-  border-radius: 50px;
+.image_container {
+  /* height: 700px; */
   width: 100%;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+}
+.image_container img {
+  width: 100%;
+  height: 700px;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  object-fit: cover;
 }
 
 .gradient-overlay {
   position: absolute;
-  top: 0;
+  height: 900px;
+  top: 0px;
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(122, 1, 1, 0.5), rgba(0, 0, 255, 0.062));
+  background: linear-gradient(rgba(89, 93, 83, 0.85), rgba(75, 80, 10, 0.965));
   mix-blend-mode: overlay; /* You can change this value for different effects */
   pointer-events: none;
 }
-.get_started{
+
+.get_started {
+  width: 30%;
   position: absolute;
-  top: 500px;
-  left: 70px;
-  /* width: 273px;
-  height: 86px; */
+  top: 470px;
+  left: 125px;
   border-radius: 40px;
-  background-color: #84F4AD;
-  padding: 20px 40px;
-  align-self: flex-start;
+  background-color:#5D30F1;
   text-align: center;
-  color: #0C0808;
+  color: whitesmoke;
   cursor: pointer;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 22px;
   outline: none;
   border: none;
 }
+
 .get_started:hover{
-  background-color:#84f4aded;
+  background-color:#5D30F1;
+  cursor: pointer;
   }
 
-
-
-.wrapper_2 {
-  font-family: 'Inter', sans-serif;
-}
-.row {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-}
-.col_1 {
-  width: 562px;;
-  line-height: 25px;
-  margin: 30px 50px;
-  text-align: left;
-  flex-basis: 35%;
-  margin-left: 100px;
-  margin-bottom: 30px;
-}
-.col_1 h1 {
-  justify-content: left;
-  font-size: 32px;
-  text-align: left;
-}
-.col_1 p{
-  line-height: 25px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #0C0808;
-  width: 520px;
-}
-
-.col_2 {
-  flex-basis: 50%;
-  margin-bottom: 30px;
-  width: 562px;
-  height: 500px;
-  border-radius: 15px;
-  overflow: hidden;
-  position: relative;
-}
-
-.col_2 img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 15px;
-  display: block;
-  background-position: top;
-}
-
-.col_3 {
-  line-height: 25px;
-  margin: 10px 50px;
-  text-align: left;
-  flex-basis: 40%;
-  margin-left: -100px;
-  margin-bottom: 30px;
-}
-.col_3 h1 {
-  justify-content: left;
-  font-size: 32px;
-  text-align: left;
-}
-.col_3 h2 {
-  color:#0C0808;
-  font-size: 50px;
-  font-weight: 500;
-  text-align: left;
-  margin-top: -5px;
-  padding: 10px 0px;
-}
-
-.col_3 p{
-  line-height: 25px;
-  font-weight: 400;
-  font-size: 20px;
-  padding-top: 30px;
-  color: #0C0808;
-}
-.col_4 img{
-  width: 100%;
-  border-radius: 15px;
-  height: 384px;
-  width: 562px;
-  margin-left: -35px;
-}
-.col_4 {
-flex-basis: 60%;
-margin-bottom: 30px;
-}
-.content h1{
- font-family: 'myriad-pro';
-}
-.title {
- padding: 30px 0px;
- line-height: 30px;
- color: #5D30F1;
-
-}
-.subtitle {
-  color: #0C0808;
-  font-size: 60px;
-}
-.col_6{
-  flex-basis: 50%;
-}
-.col_6 .subtitle {
-  width: 600px;;
-  line-height: 50px;
-  margin-top: 0px;
-  margin-bottom: 30px;
-  color: #0C0808;
-  font-size: 50px;
-}
-.col_6 {
-  width: 502px;;
-  line-height: 25px;
-  margin: 30px 50px;
-  text-align: left;
-  flex-basis: 35%;
-  margin-left: 100px;
-  margin-bottom: 30px;
-}
-.col_6 h1 {
-  justify-content: left;
-  margin-top: -30px;
-  font-size: 32px;
-  text-align: left;
-}
-.col_6 p{
-  line-height: 25px;
-  font-weight: 400;
-  font-size: 20px;
-  color: #0C0808;
-  width: 520px;
-}
-.core_values {
-  height: 614px;
-  background-color:#ffffff;
-  margin: auto;
-}
-.text {
+.ui h2 {
   color: #5D30F1;
-  font-size: 60px;
+  font-size: 32px;
+  line-height: 50px;
   text-align: left;
-  margin: 30px 100px;
 }
-.gradient-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: linear-gradient(to bottom, rgba(165, 210, 231, 0.794), rgba(255, 0, 111, 0.062));
-  mix-blend-mode: overlay; /* You can change this value for different effects */
-  pointer-events: none;
+.ui h3{
+  font-size: 60px;
+  line-height: 70px;
+  text-align: left;
 }
-.frame17 {
-  position: absolute;
-  margin-top: -300px;
-  margin-left: 700px;
-  z-index: 1000;
+.ui p {
+  color:#0C0808;
+  padding-top: 20px;
+  text-align: left;
+  line-height: 35px;
+  font-size: 20px;
 }
-/* .frame18 {
-  position: absolute;
-  margin-top: -200px;
-  margin-left: 980px;
-  z-index: 1000;
-  background-color: #00C3FF;
-  border-radius: 70px;
-  padding: 10px 20px;
-}
-.frame18 span{
-  line-height: 1.5;
-  font-style: italic;
-} */
 
-.frame18 {
+.ui .img {
+  width: 100%;
+}
+
+
+.column .values{
+  padding: 0px!important;
+}
+
+.frame17 {
+  display: none;
   position: absolute;
-  top: 600px;
-  /* left: 980px; */
-  right: 250px;
+
+  margin-left: 400px;
   z-index: 1000;
-  background: linear-gradient(135deg, #00C3FF, #84F4AD);
+}
+
+.mobile_sect{
+  display: none;
+}
+.get_started {
+  background: linear-gradient(to bottom, rgba(7, 255, 197, 0.962), rgba(0, 0, 255, 0.062));
   border-radius: 50px;
-  padding: 12px 28px;
+  padding: 25px 28px;
   box-shadow: 0 10px 30px rgba(0, 195, 255, 0.3);
   animation: floatBubble 6s ease-in-out infinite;
   transition: transform 0.3s ease;
   cursor: default;
+
 }
 
-.frame18:hover {
+.get_started:hover {
   transform: scale(1.03);
   box-shadow: 0 12px 40px rgba(0, 195, 255, 0.5);
 }
 
-.frame18 span {
-  font-size: 16px;
-  font-style: italic;
-  font-weight: 500;
-  line-height: 1.6;
-  letter-spacing: 0.3px;
-  text-align: center;
-  display: block;
-}
+
 
 /* Float animation */
 @keyframes floatBubble {
@@ -386,15 +277,250 @@ margin-bottom: 30px;
 }
 
 .group {
-  position: absolute;
-  margin-top: -180px;
-  margin-left: 80px;
-  z-index: 1000;
+  position: relative;
+  top: 20px;
+  left: 40px;
+  /*  : 1000; */
 }
-.row i {
+
+.group img {
+  max-width: 100%; /* Ensure the image is responsive */
+  height: auto;
+}
+.column i {
   color: #5D30F1;
   margin-right: 20px;
 }
 .row p {
   color: #0C0808;
 }
+.text {
+  color: #5D30F1;
+  font-size: 60px;
+  text-align: left;
+  padding:  10px;
+  margin: 30px 0px;
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  .contain{
+    padding: 10px 5px;
+    height: 50px;
+    background-color: #0C0808;
+  }
+  .wrapper{
+    margin: 0!important;
+  }
+ 
+  /* Mobile-specific navigation */
+  nav ul {
+    display: none; /* Hide menu on small screens */
+    width: 100%;
+    text-align: center;
+    flex-direction: column;
+    background-color: #0C0808;
+    position: absolute;
+    top: 60px; /* Adjust according to your navigation height */
+    left: 0;
+    padding: 20px 0;
+  }
+
+  .nav-links li {
+    margin: 10px 0;
+  }
+  .breadcrumb-icon {
+    position: absolute;
+    display: flex;
+    align-self: center;
+    font-size: 22px;
+    cursor: pointer;
+    right: 10px;  /* Ensure it stays within the screen's right edge */
+    color: whitesmoke;
+    padding: 10px;  /* Adjust padding if necessary */
+    border-radius: 5px;
+    box-sizing: border-box;  /* Ensures padding doesn't cause overflow */
+  }
+  
+  /* Show hamburger icon on mobile */
+  .menu-toggle {
+    display: flex;
+  }
+
+  /* Show the menu when hamburger is clicked */
+  .menu-toggle.open + .nav-links {
+    display: flex;
+  }
+  .image_container {
+    width: 100%;
+    top: 0px;
+    left: 0;
+    right: 0;
+    padding: 0 ! important;
+    border-radius: 0px;
+    object-fit: cover;
+  }
+  /* Hero image adjustments */
+  .image_container img {
+  
+    width: 100%;
+    height: 300px;
+    border-radius: 0px;
+    object-fit: cover;
+  }
+  .gradient-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(22, 20, 20, 0.4), rgb(0, 0, 0));
+    z-index: 1;
+    opacity: .5;
+    mix-blend-mode: overlay; /* You can change this value for different effects */
+    pointer-events: none;
+  }
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav ul li {
+    margin: 10px 0;
+  }
+
+  /* Button and text adjustments */
+  .get_started {
+    display: none;
+    color: whitesmoke;
+    display: flex;
+    justify-self: center;
+    align-items: center;
+    width: 60%;
+    padding: 12px 5px;
+    font-size: 14px;
+    left: 20%;
+    top: 600px;
+    background-color: #5D30F1;
+    opacity: .8;
+  }
+
+  .vertical_text_1 {
+    display: none;
+  }
+  .vertical_text_2 {
+    display: none;
+  }
+.mobile_sect{
+ top: -10px;
+  position: relative;
+  display: block;
+  height: 300px;
+  background-color: #0C0808;
+}
+.mobile_started button{
+  width: 60%;
+  padding: 10px 20px;
+  position: absolute;
+  top: 170px;
+  margin-left:10%;
+  margin-right: auto;
+  border-radius: 40px;
+  background-color:#5D30F1;
+  text-align: center;
+  color: whitesmoke;
+  cursor: pointer;
+  font-size: 14px;
+  outline: none;
+  border: none;
+}
+ .mobile_text{
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    width: 100%;
+    padding: 30px 40px !important;
+    left: 0px;
+    text-align: left;
+    font-size: 12 px;
+    line-height: 30px;
+    top: 350px;
+    color: whitesmoke;
+  }
+  .logo_container img{
+    width: 50%;
+  }
+  .text {
+    color: #5D30F1;
+    font-size: 36px;
+    text-align: left;
+    padding:  10px;
+    margin: 30px 0px;
+  }
+ 
+  /* Add padding to text columns */
+.ui.segment {
+    padding: 20px; /* Add padding to all text content inside the segments */
+}
+
+/* Add more padding on the left and right of text columns */
+.ui.two.column.stackable .column:first-child {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.about_wrapper {
+  padding: 30px;
+}
+
+  .ui h2 {
+    color: #5D30F1;
+    font-size: 32px;
+    line-height: 50px;
+  }
+  .ui h3{
+    display: none;
+    font-size: 30px;
+    line-height: 50px;
+  }
+  .ui img{
+    height: 300px;
+    width: 100%;
+    border-radius: 0px;
+  }
+  .ui p{
+    font-size: 1rem;
+    padding-top: 20px;
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .frame17{
+    margin-left: 50px;
+    margin-right: auto;
+  }
+  .frame18{
+    display:none;
+  }
+  .ui.pusher{
+    height: 5calc(100vh - 400px)
+  }
+  .ui.sidebar.menu {
+    width: 180px!important;
+    opacity: 0.8;
+    padding-top: 50px;
+    font-size: 1.1em;
+  }
+
+  .ui.sidebar.menu .item {
+    padding: 1em 1.5em;
+    display: inline-flex;
+    flex-direction: row;
+    align-self: flex-start;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .ui.sidebar.menu .item i {
+    margin-right: 12px;
+    min-width: 20px;
+    text-align: left;
+  }
+}
+
