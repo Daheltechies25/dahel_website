@@ -4,15 +4,11 @@ body {
     text-align: center;
     overflow-x: hidden; 
 }
+
 .audience-section{
     overflow-y: hidden;
 }
 
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
 .wrapper-who-we-are{
     background: #0F0F0F;
     color: #FFFFFF;
@@ -140,6 +136,7 @@ h2 {
 .wrapper-our-pillar{
     background: #FFFFFF;
     padding-block: 150px;
+    padding:100px 80px;
 }
 
 
@@ -165,7 +162,7 @@ h2 {
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 50px;
-    margin-bottom: 0px;
+    margin-bottom: 70px;
     padding-inline: 70px;
 }
 
@@ -375,11 +372,7 @@ h2 {
     position: relative;
     top: 20px;
 }
-.audio .aud{
-    ;
-    width: 200px;
-    height: auto;
-}
+
 
 @media (max-width: 900px) {
    /* who we are section */
@@ -409,7 +402,7 @@ h2 {
         align-items: center;
         text-align: center;
         padding: 20px;
-        width: 100%;
+        width: 80%;
     }
 
     .audience-item i {
@@ -486,4 +479,43 @@ h2 {
     .footer-socials .social-icons {
         justify-content: center;
     }
+      .wrapper-our-pillar {
+    background-color: #ffffff !important;
+    padding: 40px 16px;
+  }
+
+  .wrapper-our-pillar .container {
+    background-color: transparent !important;
+  }
+
+  .wrapper-our-pillar .pillar {
+    flex-direction: column !important;
+  }
+
+  .wrapper-our-pillar .pillar-image,
+  .wrapper-our-pillar .pillar-text {
+    width: 100% !important;
+    padding: 0 !important;
+  }
+
+  /* Override any Semantic UI interference */
+  .wrapper-our-pillar .ui.segment,
+  .wrapper-our-pillar .ui.grid,
+  .wrapper-our-pillar .ui.container {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .btn.btn-mobile {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .btn.btn-main {
+    display: none;
+  }
+  body .ui.segment:not(.semantic-scope *) {
+  all: unset; /* undo Semantic outside the scope */
+}
 }
