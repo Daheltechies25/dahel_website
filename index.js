@@ -14,8 +14,6 @@ app.set("view engine", "ejs");
 app.use(express.static(path.join(process.cwd(), 'public')));
 app.use(express.static(path.join(process.cwd(), 'html')));
 // Serve static files from the "html" folder
-app.use(express.static(path.join(__dirname, 'html')));
-
 // Route to render the EJS templates dynamically
 app.get("/", (req, res) => {
     res.render("index", { message: "Howdy Roland" });
