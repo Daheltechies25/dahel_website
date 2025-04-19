@@ -118,16 +118,16 @@ nav ul{
 .vertical_text_1 {
   z-index: 1;
   letter-spacing: 4px;
-  width: 800px;
-  max-width: 800px;
+  width: 850px;
+  max-width: 850px;
   line-height: 90px;
   position: absolute;
   text-align: left;
-  font-weight:900 !important;
+  font-weight:600 !important;
   font-size: 80px;
   white-space: wrap;
   letter-spacing: 1px;
-  top: 200px;
+  top: 220px;
   left: 100px;
   color:whitesmoke;
 }
