@@ -11,9 +11,10 @@ app.set("view engine", "ejs");
 // app.set("views", path.join(process.cwd(), "views"));
 
 // Serve static files from the html folder (if needed)
+app.use(express.static(path.join(process.cwd(), 'html')));
+
 app.use(express.static(path.join(process.cwd(), 'public')));
-// app.use(express.static(path.join(process.cwd(), 'html')));
-// Serve static files from the "html" folder
+
 // Route to render the EJS templates dynamically
 app.get("/", (req, res) => {
     res.render("index", { message: "Howdy Roland" });
