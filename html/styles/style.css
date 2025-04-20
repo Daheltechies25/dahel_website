@@ -12,7 +12,7 @@ body {
 .wrapper-who-we-are{
     background: #0F0F0F;
     color: #FFFFFF;
-    padding: 20px 20px;
+    padding: 20px 80px;
 }
 
 .container {
@@ -48,9 +48,11 @@ h2 {
     justify-content: center;
     gap: 40px;
     margin-top: 30px;
+    margin-left: auto;
+    margin-right: auto;
     padding: 30px;
     border-radius: 15px;
-    width: 100%; 
+    width: 90%; 
     overflow-x: hidden;
 }
 
@@ -90,7 +92,9 @@ h2 {
     border-radius: 12px;
     transition: 0.3s ease-in-out;
     box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.05);
-    width: 100%;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 
@@ -498,15 +502,6 @@ h2 {
     padding: 0 !important;
   }
 
-  /* Override any Semantic UI interference */
-  .wrapper-our-pillar .ui.segment,
-  .wrapper-our-pillar .ui.grid,
-  .wrapper-our-pillar .ui.container {
-    background-color: transparent !important;
-    border: none !important;
-    box-shadow: none !important;
-  }
-
   .btn.btn-mobile {
     display: block;
     margin-top: 1rem;
@@ -515,7 +510,5 @@ h2 {
   .btn.btn-main {
     display: none;
   }
-  body .ui.segment:not(.semantic-scope *) {
-  all: unset; /* undo Semantic outside the scope */
-}
+
 }
