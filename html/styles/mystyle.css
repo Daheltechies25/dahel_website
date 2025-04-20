@@ -3,6 +3,7 @@
   box-shadow: none!important;
   padding: 0;
   margin: 0;
+
 }
 
 body {
@@ -28,31 +29,26 @@ section {
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  margin: auto;
-  padding: 5px 10px;
-  width: 100%;
+  max-width: 100%;
   height: 60px;
-  margin: 0px auto;
   color: whitesmoke;font-weight: 100;
 }
 .logo_container img {
   align-self: center;
-  max-width: 60%;   /* Prevents the logo from being larger than its container */
+  max-width: 40%;   /* Prevents the logo from being larger than its container */
 
-
+  margin-left: 80px;
   display: block;    /* Removes any unwanted space below the image */
 }
 
 .contact_us {
-  background-color: #5D30F1;
- 
-  width: 162px;
   border-radius: 5px;
   padding: 5px 15px;
   text-align: center;
   color: #ffffff;
   cursor: pointer;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: 600!important;
   outline: none;
   border: none;
 }
@@ -64,11 +60,9 @@ section {
 .breadcrumb-icon{
  display: none;   
 }
-nav {
-padding-left: auto;
-}
+
 nav ul{
-  margin-left: 530px;
+  margin-left: 0px;
 }
 /*targets the descriptive links container behaviour*/
  nav ul li{
@@ -76,7 +70,7 @@ nav ul{
   justify-content: flex-start;
   align-self: center;
   list-style: none;
-  margin: 10px 15px;
+  margin: 10px 20px;
   text-align: center;
   font-weight:100 !important;
  }
@@ -128,7 +122,7 @@ nav ul{
   white-space: wrap;
   letter-spacing: 1px;
   top: 220px;
-  left: 100px;
+  left: 80px;
   color:whitesmoke;
 }
 .vertical_text_2{
@@ -140,7 +134,7 @@ nav ul{
   font-weight:400 !important;;
   font-size: 18px;
   top:430px;
-  left: 100px;
+  left: 80px;
   margin-right: auto;
   color: whitesmoke;
 }
@@ -162,7 +156,7 @@ nav ul{
 
 .gradient-overlay {
   position: absolute;
-  height: 710px;
+  height: 700px;
   top: 60px;
   left: 0;
   right: 0;
@@ -178,7 +172,7 @@ button{
   width: 20%;
   position: absolute;
   top: 530px;
-  left: 100px;
+  left: 80px;
   border-radius: 40px;
   background-color:#5D30F1;
   text-align: center;
@@ -351,6 +345,7 @@ button{
   }
   
   .contain{
+    max-width: 100%;
     padding: 10px 5px;
     height: 50px;
     background-color: #0C0808;
@@ -540,6 +535,7 @@ button{
   /* Image adjustments on mobile */
   .flex-item.image img {
     width: 100%; /* Slightly smaller image width for mobile */
+    height: auto;
     margin: -50px auto; /* Center the image */
   }
 
